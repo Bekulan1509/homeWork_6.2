@@ -1,8 +1,6 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
@@ -14,12 +12,6 @@ public class Main {
         String names3 = scanner.nextLine();
         String names4 = scanner.nextLine();
         String names5 = scanner.nextLine();
-        System.out.println("\nlist B:");
-        String namesB = scanner.nextLine();
-        String namesB2 = scanner.nextLine();
-        String namesB3 = scanner.nextLine();
-        String namesB4 = scanner.nextLine();
-        String namesB5 = scanner.nextLine();
 
 
         ArrayList<Name> list = new ArrayList<>();
@@ -36,6 +28,12 @@ public class Main {
             Name name = iterator.next();
             System.out.println(name.getName());
         }
+        System.out.println("\nlist B:");
+        String namesB = scanner.nextLine();
+        String namesB2 = scanner.nextLine();
+        String namesB3 = scanner.nextLine();
+        String namesB4 = scanner.nextLine();
+        String namesB5 = scanner.nextLine();
 
 
         ArrayList<Name> listB = new ArrayList<>();
@@ -53,6 +51,30 @@ public class Main {
             System.out.println(name.getName());
         }
 
+        ArrayList<Name> listC = new ArrayList<>();  //   {A1,B5,А2,Б4,А3,Б3,А4,Б2,А5,Б1}
+        listC.add(list.get(0));
+        listC.add(listB.get(4));
+        listC.add(list.get(1));
+        listC.add(listB.get(3));
+        listC.add(list.get(2));
+        listC.add(listB.get(2));
+        listC.add(list.get(3));
+        listC.add(listB.get(1));
+        listC.add(list.get(4));
+        listC.add(listB.get(0));
+        Collections.sort(listC);
+        System.out.println("\n list C");
+
+
+        iterator = listC.iterator();
+        while (iterator.hasNext()) {
+            Name name = iterator.next();
+            String arrNames = name.toArray();
+            //System.out.println(name.getName());
+            System.out.print(Arrays.toString(new String[]{arrNames}));
+
+
+        }
 
     }
 
