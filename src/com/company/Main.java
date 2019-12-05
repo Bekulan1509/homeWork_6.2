@@ -8,18 +8,18 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("list A:");
         String names = scanner.nextLine();
         String names2 = scanner.nextLine();
         String names3 = scanner.nextLine();
         String names4 = scanner.nextLine();
         String names5 = scanner.nextLine();
-
+        System.out.println("\nlist B:");
         String namesB = scanner.nextLine();
         String namesB2 = scanner.nextLine();
         String namesB3 = scanner.nextLine();
         String namesB4 = scanner.nextLine();
         String namesB5 = scanner.nextLine();
-
 
 
         ArrayList<Name> list = new ArrayList<>();
@@ -31,15 +31,15 @@ public class Main {
         System.out.println("\nlist A:");
 
 
-        Iterator <Name> iterator = list.iterator();
-while (iterator.hasNext()){
-   Name name = iterator.next();
-    System.out.println(name.getName());
-}
+        Iterator<Name> iterator = list.iterator();
+        while (iterator.hasNext()) {
+            Name name = iterator.next();
+            System.out.println(name.getName());
+        }
 
 
-       ArrayList<Name> listB = new ArrayList<>();
-       listB.add(new Name(namesB));
+        ArrayList<Name> listB = new ArrayList<>();
+        listB.add(new Name(namesB));
         listB.add(new Name(namesB2));
         listB.add(new Name(namesB3));
         listB.add(new Name(namesB4));
@@ -48,12 +48,14 @@ while (iterator.hasNext()){
 
 
         iterator = listB.iterator();
-while(iterator.hasNext()){
-    Name name = iterator.next();
-    System.out.println(name.getName());
+        while (iterator.hasNext()) {
+            Name name = iterator.next();
+            System.out.println(name.getName());
+        }
+
+
+    }
+
+
 }
-    }
-
-
-    }
 
