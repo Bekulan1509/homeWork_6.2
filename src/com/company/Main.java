@@ -62,7 +62,6 @@ public class Main {
         listC.add(listB.get(1));
         listC.add(list.get(4));
         listC.add(listB.get(0));
-        Collections.sort(listC);
         System.out.println("\n list C");
 
 
@@ -72,8 +71,12 @@ public class Main {
             String arrNames = name.toArray();
             //System.out.println(name.getName());
             System.out.print(Arrays.toString(new String[]{arrNames}));
-
-
+        }
+        iterator = listC.iterator();
+        while(iterator.hasNext()){
+            Name name = iterator.next();
+            Collections.sort(listC);
+            System.out.println(name);
         }
 
     }
