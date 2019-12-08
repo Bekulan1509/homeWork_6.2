@@ -53,7 +53,7 @@ public class Main {
 
         ArrayList<Name> listC = new ArrayList<>();  //   {A1,B5,А2,Б4,А3,Б3,А4,Б2,А5,Б1}
         listC.addAll(list);
-        listC.addAll(list);
+        listC.addAll(listB);
         Collections.sort(listC);
         System.out.println("\n list C");
 
